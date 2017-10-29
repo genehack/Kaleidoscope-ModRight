@@ -54,7 +54,7 @@ namespace kaleidoscope {
     }
 
     Key orig, repl;
-    Key *active_list;
+    const Key *active_list;
 
     active_list = (mod_active_right) ? require_left : require_right;
 
