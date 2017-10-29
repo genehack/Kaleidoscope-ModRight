@@ -23,8 +23,8 @@
 namespace kaleidoscope {
   class ModRight : public KaleidoscopePlugin {
   public:
-    const Key *require_right;
-    const Key *require_left;
+    const static Key *require_right;
+    const static Key *require_left;
 
     ModRight(void);
 
