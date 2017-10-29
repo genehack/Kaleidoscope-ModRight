@@ -20,8 +20,8 @@
 #include <kaleidoscope/hid.h>
 
 namespace kaleidoscope {
-  const Key *require_left;
-  const Key *require_right;
+  const Key *ModRight::require_left;
+  const Key *ModRight::require_right;
 
   bool ModRight::mod_active_;
   bool ModRight::mod_active_left;
