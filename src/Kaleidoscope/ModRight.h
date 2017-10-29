@@ -23,15 +23,12 @@
 namespace kaleidoscope {
   class ModRight : public KaleidoscopePlugin {
   public:
-    typedef struct {
-      Key[] require_left, require_right;
-    } dictionary_t;
+    const Key *require_right;
+    const Key *require_left;
 
     ModRight(void);
 
     void begin(void) final;
-
-    static const dictionary_t *dictionary;
   private:
     static bool mod_active_;
     static bool mod_active_left;

@@ -40,18 +40,16 @@ const Key keymaps[][ROWS][COLS] PROGMEM =
     Key_NoKey),
 };
 
-static const kaleidoscope::ModRight::dictionary_t modright_dictionary[] PROGMEM =
-  {
-   [Key_M, Key_NoKey], // keys requiring left shift
-   [Key_A, Key_NoKey], // keys requiring right shift
-  };
+const static Key require_left[] PROGMEM  = { Key_M, Key_NoKey };
+const static Key require_right[] PROGMEM = { Key_A, Key_NoKey };
 
 void setup() {
   Kaleidoscope.use(&ModRight);
 
   Kaleidoscope.setup();
 
-  ModRight.dictionary = modright_dictionary;
+  ModRight.require_left  = require_left;
+  ModRight.require_right = require_right;
 }
 
 void loop() {
